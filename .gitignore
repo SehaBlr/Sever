@@ -2,3 +2,4 @@
 /dist
 /app/*.html
 /images/*.*
+/app/css/style.min.css
