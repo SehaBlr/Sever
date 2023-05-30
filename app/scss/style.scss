@@ -1,0 +1,29 @@
+$clOrange: #FF6633;
+$clGreen: #70C05B;
+$clGray: #F3F2F1;
+$clRed: #D80000;
+$clLightOrange: #FCD5BA;
+$clLightGreen: #E5FFDE;
+$clLightGray: #FFFFFF;
+$clLightRed: #FFC7C7;
+
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.cl_green{
+    background-color: $clGreen;
+}
+.container{
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+

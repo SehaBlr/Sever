@@ -77,17 +77,19 @@ function scripts(){
 }
 
 function styles() {
-    return scripts('app/scss/style.scss')
-    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version']}))
+    return src('app/scss/style.scss')
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 8 versions']}))
     .pipe(concat('style.min.css'))
-    .pipe(scss({ outputStyle: 'compressed'}))
+    .pipe(scss({ outputStyle: 'compressed'}).on('error', scss.logError))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
 
-function watching() {  
+function watching() {     
     browserSync.init({
-        baseDir: "app/"
+        server:{
+            baseDir: "app/"
+        }
     });  
     watch(['app/scss/style.scss'], styles)
     watch(['app/images/src'], images)
@@ -122,6 +124,7 @@ exports.watching = watching;
 exports.sprite = sprite;
 exports.fonts = fonts;
 exports.building = building;
+// exports.browsersync = browsersync;
 
 exports.build = series(cleanDist, building);
 exports.default = parallel(styles, images, scripts, pages, watching);
