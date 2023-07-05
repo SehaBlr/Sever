@@ -4,9 +4,9 @@
             <a href="#" class="header__logo">
                 <img src="images/logo-full-cl.svg" alt="logo">
             </a>
-            <div class="header__middle-container">
-                <button class="btn-catalog cl_green">
-                    <span class="btn-catalog__burger"></span>
+            <div class="header__search-form">
+                <button class="btn-catalog btn__clGreen ">
+                    <i class="btn-catalog__burger icon-menu"></i>
                     <span class="btn-catalog__label">Каталог</span>                    
                 </button>
                 <form action="POST" class="search">
@@ -15,10 +15,18 @@
                     <button class="search__button icon-search"></button>
                 </form>
             </div>
-            <div class="header__menu-container">
-                <button class="header__favorite icon-heart"><span>Избранное</span></button>
-                <button class="header__orders icon-package"><span>Заказы</span></button>
-                <button class="header__cart icon-shopping-cart "><span>Корзина</span></button>
+            <div class="header__user_menu">                
+                <div class="header__menu-container">
+                    <button class="header__favorite icon-heart"><span>Избранное</span></button>
+                    <button class="header__orders icon-package"><span>Заказы</span></button>
+                    <button class="header__cart icon-shopping-cart "><span>Корзина</span></button>
+                </div>
+                <img src="images/avatar.png" alt="avatar" class="user_menu__avatar">
+                <p class="user_menu__name">Алексей</p>
+                <ul class="user_menu__dropdown user_menu__dropdown--closed">
+                    <li class="user_menu__item">Профиль</li>
+                    <li class="user_menu__item">Выйти</li>
+                </ul>
             </div>
         </div>
     </header>

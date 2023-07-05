@@ -16,14 +16,72 @@ $clLightRed: #FFC7C7;
 
 html{
     font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;    
 }
 
-.cl_green{
+.btn__clGreen{
     background-color: $clGreen;
+    color: #FFFFFF;
+    font-size: 1.6rem;
 }
 .container{
     max-width: 144rem;
     margin: 0 auto;
 }
+.header__logo{
+    width: 15.2rem;
+    margin: 2rem 4rem 2rem 0;
+}
+.header__main-menu{
+    padding: 0 11.6rem;
+    display: flex;
+    justify-content: space-between;
+}
 
+.header__user_menu{
+    padding: 1.6rem;
+}
+.user_menu__avatar{
+    height: 4rem;
+    width: 4rem;
+}
+.user_menu__name{
+    margin-left: 2rem;
+}
+.header__user_menu{
+    display: flex;
+    margin: 2rem 0;
+    width: auto;
+}
+.user_menu__dropdown--closed>li{
+    display: none;
+}
+.header__search-form{
+    display: flex;
+    margin: 2rem 4rem 2rem 0;
+}
+.btn-catalog{
+   width: 14rem;
+   height: 4rem;
+   padding: .8rem;
+   border-radius: .4rem;
+   border: none;
+   position: relative;
+}
 
+.btn-catalog__burger{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2.4rem;
+    position: absolute;
+    left: 1rem;
+    top:.8rem;
+
+}
+
+.btn-catalog__label{
+    display: inline-block;
+    text-align: center;
+    margin-left:3.2rem ;
+}
