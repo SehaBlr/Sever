@@ -1,5 +1,4 @@
 const {src, dest, watch, parallel, series} = require('gulp');
-
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
@@ -100,20 +99,19 @@ function watching() {
 
 
 function cleanDist() {
-    returnsrc('dist')
-    .pipe(clean())
-}
+    return src('docs')
+      .pipe(clean())
+  }
 
 function building() {
     return src([
         'app/css/style.min.css',
         'app/images/*.*',
-        '!app/images/*.svg',
-        'app/images/sprite.svg',
         'app/fonts/*.*',
         'app/js/main.min.js',
-        'app/**/*.html'
-    ], {base: 'app'})
+        'app/*.html'
+    ], {base : 'app'})
+    .pipe(dest('docs'))
 }
 
 exports.styles = styles;

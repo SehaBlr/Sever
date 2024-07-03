@@ -1,5 +1,6 @@
 /node_modules
-/dist
+
 /app/*.html
 /images/*.*
 /app/css/style.min.css
+/app/js/main.min.js
